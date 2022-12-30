@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+    <div x-data="{
+      isOpen1:false,
+      isOpen2:false,
+      isOpen3:false,
+      }">
+      <button @click="isOpen1 = ! isOpen1">ouvre1</button>
+      <p x-show="isOpen1" x-collapse>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum! Porro, facere? Voluptates id vel itaque cum asperiores suscipit illum voluptas. Aliquid ab perferendis eaque aperiam repellendus in, reiciendis adipisci.</p>
+      <button @click="isOpen2 = ! isOpen2">ouvre2</button>
+      <p x-show="isOpen2" x-collapse>Quo, architecto illum quidem fugit harum voluptatum mollitia, sit tempora dignissimos alias, aliquid cumque odit facilis vitae. Qui soluta dolorum voluptates amet libero magnam, nobis commodi, ab, eveniet hic vel?</p>
+      <button @click="isOpen3 = ! isOpen3">ouvre3</button>
+      <p x-show="isOpen3" x-collapse>Temporibus quae aperiam necessitatibus asperiores. Recusandae harum atque similique nemo. Illum, et tenetur ad eligendi earum ipsum incidunt beatae officiis cupiditate deserunt aut impedit. Magnam odit sit quod! Harum, impedit?</p>
+    </div>
   </body>
 </html>
