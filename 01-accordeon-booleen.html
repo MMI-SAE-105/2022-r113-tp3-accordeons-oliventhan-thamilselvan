@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section x-data="{ open: false }">
+        <button @click="open = ! open">bouton 1</button>
+        <p x-show="open" x-transition>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est dolor in eum sit dolore exercitationem. Ullam excepturi aperiam explicabo doloremque veniam sint non, aspernatur neque laboriosam ipsa sunt eveniet!</p>
+      </section>
+      <section x-data="{ open: false }">
+        <button @click="open = ! open">bouton 2</button>
+        <p x-show="open" x-transition>Ratione at dolorem incidunt! Molestiae consectetur, temporibus quod neque provident minus eligendi ex eaque! Dolore quam reprehenderit recusandae sed distinctio? Nulla, unde dolor! Necessitatibus commodi accusantium excepturi magnam temporibus odit!</p>
+      </section>
+      <section x-data="{ open: false }">
+        <button @click="open = ! open">bouton 3</button>
+        <p x-show="open" x-transition>Quidem omnis natus consequuntur? Sed quisquam sint quidem, corporis animi aliquam expedita qui ducimus pariatur laudantium, enim placeat non doloremque amet officiis ullam temporibus obcaecati! Suscipit laborum ea enim a.</p>
+      </section>
+    </div>
   </body>
 </html>
