@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Onglets</title>
   </head>
-  <body>
+  <body x-data="{isOpen : 1,}">
     <h1>Onglets</h1>
+    <div id="onglets">
+      <ul role="tablist">
+        <li :class="{actif:isOpen === 1}" role="tab" @click="isOpen = 1">Onglet 1</li>
+        <li :class="{actif:isOpen === 2}" role="tab" @click="isOpen = 2">Onglet 2</li>
+        <li :class="{actif:isOpen === 3}" role="tab" @click="isOpen = 3">Onglet 3</li>
+      </ul>
+    </div>
+
+
+
   </body>
 </html>
