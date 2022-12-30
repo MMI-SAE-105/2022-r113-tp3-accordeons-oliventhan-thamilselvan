@@ -18,7 +18,20 @@
       </ul>
     </div>
 
-
+    <div class="parent">
+      <div :class="{panneau_actif:isOpen === 1}" class="enfant" role="tabpanel">
+        <h1>Panneau 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed animi hic ducimus autem facere minima in ex, cumque optio earum maiores et alias beatae eveniet, error pariatur! Itaque, tempora! Libero!</p>
+      </div>
+      <div :class="{panneau_actif:isOpen === 2}" class="enfant" role="tabpanel">
+        <h1>Panneau 2</h1>
+        <p>Esse doloribus porro iusto ratione assumenda. Aspernatur magnam labore velit ex laborum veritatis cupiditate, consequuntur voluptate nostrum hic vitae cum enim aperiam reiciendis provident eos, necessitatibus fugiat. Praesentium, provident delectus?</p>
+      </div>
+      <div :class="{panneau_actif:isOpen === 3}" class="enfant" role="tabpanel">
+        <h1>Panneau 3</h1>
+        <p>Nulla officia nobis nostrum tempore, corporis eaque eum inventore libero perspiciatis voluptatem ipsum similique officiis debitis nam labore consectetur ipsa ab dolorem necessitatibus earum asperiores cumque harum, provident veniam. Velit?</p>
+      </div>
+    </div>
 
   </body>
 </html>
