@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
+    <ul id="accordeon" x-data="{isOpen: 0,}" >  
+      <button @click="isOpen = 1">Ouvre 1</button>
+      <li :class="{actif:isOpen === 1}">
+        <figure>
+          <img src="https://picsum.photos/102?random=1" alt="" width="102">
+          <figcaption>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <button @click="isOpen = 2">Ouvre 2</button>
+      <li :class="{actif:isOpen === 2}">
+        <figure>
+          <img src="https://picsum.photos/102?random=2" alt="" width="102">
+          <figcaption>
+            <h3>Cum, non unde!</h3>
+            <p>Quibusdam, alias fugit? Fuga, ad odit.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <button @click="isOpen = 3">Ouvre 3</button>
+      <li :class="{actif:isOpen === 3}">
+        <figure>
+          <img src="https://picsum.photos/102?random=3" alt="" width="102">
+          <figcaption>
+            <h3>Iure, dicta et!</h3>
+            <p>Reprehenderit corporis provident molestias neque nemo!</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </body>
 </html>
+
+<style>
+  #accordeon {
+       display: flex;/* pour que les éléments soient alignés horizontalement */
+       margin: 0;/* pour éviter les marges par défaut */
+       padding: 0;/* pour éviter les "padding" par défaut */
+  }
